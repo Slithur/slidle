@@ -116,16 +116,16 @@ function handleGuess(event) {
             song.pause()
             console.log("YOU WON!!")
             quote = secretAnime.quote;
+            wins+=1;
 
             let html;
 
             if (secretAnime.quote != undefined) {
-                html = "<video src='videos/yes.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>" + "" + "Score" + " " + wins +"</p>";
+                html = "<video src='videos/yes.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>" + "Score: " + " " + wins +"</p>";
             }
             else {
                 html = "<video src='videos/yes.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video>";
             }
-
             Swal.fire({
                 
                 html: html,
@@ -135,9 +135,9 @@ function handleGuess(event) {
             }).then(function () {
             refresh();
             })
-            wins+=1;
+            
 
-            console.log("Current score: " + wins);
+            console.log("Current score: " + wins );
 
         }
 
@@ -151,15 +151,13 @@ function handleGuess(event) {
 
         Swal.fire({
 
-            html: "<video src='videos/no.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>ANIME: " + secretAnime.anime   + " " + "   " + "SCORE:" +wins + "</p>",
+            html: "<video src='videos/no.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p margin = '25px 50px 75px 100px'>ANIME: " + secretAnime.anime + "</p>" +"<p margin = '25px 50px 75px 100px' style='white-space: pre-line;'>\n SCORE: " + wins + "</p>",
             icon: 'error',
             confirmButtonText: 'Play Again',
             background: 'black',
         }).then(function () {
             location.reload();
         })
-
-        highscore();
 
         console.log("Last score: " + wins)
         wins = 0;
