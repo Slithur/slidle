@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" defer>
+</head>
+ <div id="info"> <img src="img/info.png" alt="info" width="2%" > </div>  
+ <div id="gear"> <img src="img/gear.png" alt="info" width="2%" ></div> 
+<body>
+    
+   
+
+
+    <audio id="song">
+        <source type="audio/mpeg">
+    </audio>
+
+
+    <div class="play_and_guess">
+
+        <div id="wave">
+            <img id = "gif" src="img/wave.gif" alt="waveform" width="210" id="gif" style="visibility: hidden" />
+            <br />
+        </div>
+
+        <br>
+
+
+        <div id="play">
+            <img id = "playButton" src="img/play.png" alt="play button" width="100"
+                onclick=" if(this.getAttribute('src')==='img/play.png'){this.setAttribute('src','img/pause.png'); document.getElementById('gif').style.visibility = 'visible'; playSong() } 
+        else{this.setAttribute('src','img/play.png'); document.getElementById('gif').style.visibility = 'hidden'; pause()} " />
+        </div>
+
+
+
+
+
+        <div id="search-bar">
+            <form>
+                <input id="search" type="text" class="search-term" placeholder=" Guess that Anime?" autocomplete="off">
+            </form>
+            <p id="previousGuesses"></p>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+
+
+</html>

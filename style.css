@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Arial;
+
+}
+
+
+
+
+body {
+    background-image: url("https://www.lorenzomercanti.com/wp-content/uploads/2020/08/06_Magic-Hand_low.gif");
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    /* background-color: teal; */
+}
+
+
+.play_and_guess {
+    padding: 17vh 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+#search-bar {
+
+
+
+}
+
+
+
+#previousGuesses {
+
+    font-family: fantasy;
+    font-size: large;
+    height: 35;
+    color: rgb(255, 212, 133);
+
+
+}
+
+
+#gear {
+display: flex;
+justify-content: end;
+
+    
+}
