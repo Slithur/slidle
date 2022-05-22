@@ -9,13 +9,43 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" defer>
-</head>
- <div id="info"> <img src="img/info.png" alt="info" width="2%" > </div>  
- <div id="gear"> <img src="img/gear.png" alt="info" width="2%" ></div> 
-<body>
-    
-   
+    <script>
+        function info() {
+            Swal.fire({
 
+                title: 'How to play?',
+                text: 'Click the play button, you will have three tries to guess the anime opening. Now lets see if your a real weeb or a pretender',
+                imageUrl: 'https://www.animenachrichten.de/wp-content/uploads/2018/08/FmzcM.jpg',
+               icon: 'info',
+               background: 'black'
+                
+        })
+            
+
+        }
+
+function gear() {
+            Swal.fire({
+
+                title: 'Next Slirdle',
+                imageUrl: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/04/Featured-Image-Usopp-Wanted-Poster-Cropped.jpg',
+               icon: 'question',
+               
+               background: 'black'
+                
+        })
+            
+
+        }
+
+
+    </script>
+</head>
+<div class="nav">
+<div id="info"> <img src="img/info.png" alt="info" width="5%" type="button" value="" onclick="info()"> </div>
+ <div id="gear"> <img src="img/gear.png" alt="info" width="5%" type="button" value="" onclick="gear()"></div> 
+</div>
+<body>
 
     <audio id="song">
         <source type="audio/mpeg">
@@ -25,7 +55,7 @@
     <div class="play_and_guess">
 
         <div id="wave">
-            <img id = "gif" src="img/wave.gif" alt="waveform" width="210" id="gif" style="visibility: hidden" />
+            <img id="gif" src="img/wave.gif" alt="waveform" width="210" id="gif" style="visibility: hidden" />
             <br />
         </div>
 
@@ -33,7 +63,7 @@
 
 
         <div id="play">
-            <img id = "playButton" src="img/play.png" alt="play button" width="100"
+            <img id="playButton" src="img/play.png" alt="play button" width="100"
                 onclick=" if(this.getAttribute('src')==='img/play.png'){this.setAttribute('src','img/pause.png'); document.getElementById('gif').style.visibility = 'visible'; playSong() } 
         else{this.setAttribute('src','img/play.png'); document.getElementById('gif').style.visibility = 'hidden'; pause()} " />
         </div>

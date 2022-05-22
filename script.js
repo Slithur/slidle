@@ -10,7 +10,6 @@ let previousGuesses = [];
 let guessAmount = 1;
 let previousGuessesEl = document.getElementById("previousGuesses");
 let wins = 0;
-
 let songs = [
     {
         song: 'songs/one_piece.mp3',
@@ -121,16 +120,18 @@ function handleGuess(event) {
             let html;
 
             if (secretAnime.quote != undefined) {
-                html = "<video src='videos/yes.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>" + secretAnime.quote + "</p>";
+                html = "<video src='videos/yes.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>" + "" + "Score" + " " + wins +"</p>";
             }
             else {
                 html = "<video src='videos/yes.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video>";
             }
 
             Swal.fire({
+                
                 html: html,
                 icon: 'success',
-                confirmButtonText: 'Play Again'
+                confirmButtonText: 'Play Again',
+                background: 'black',
             }).then(function () {
             refresh();
             })
@@ -149,12 +150,16 @@ function handleGuess(event) {
         song.pause()
 
         Swal.fire({
-            html: "<video src='videos/no.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>The anime is " + secretAnime.anime + "</p>",
+
+            html: "<video src='videos/no.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p>ANIME: " + secretAnime.anime   + " " + "   " + "SCORE:" +wins + "</p>",
             icon: 'error',
-            confirmButtonText: 'Play Again'
+            confirmButtonText: 'Play Again',
+            background: 'black',
         }).then(function () {
             location.reload();
         })
+
+        highscore();
 
         console.log("Last score: " + wins)
         wins = 0;
@@ -193,8 +198,6 @@ function refresh(){
     guessAmount = 1;
     $("#playButton").attr('src', "img/play.png");
 }
-
-
 
 
 
