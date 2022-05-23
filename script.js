@@ -151,7 +151,7 @@ function handleGuess(event) {
 
         Swal.fire({
 
-            html: "<video src='videos/no.mp4' width='75%' height='75%' autoplay webkit-playsinline playsinline></video> <p margin = '25px 50px 75px 100px'>ANIME: " + secretAnime.anime + "</p>" +"<p margin = '25px 50px 75px 100px' style='white-space: pre-line;'>\n SCORE: " + wins + "</p>",
+            html: "<video src='videos/no.mp4' width='60%' height='60%' autoplay webkit-playsinline playsinline></video> <p margin = '5px 5px 5px 5px'>ANIME: " + secretAnime.anime + "</p>" +"<p margin = '5px 5px 5px 5px' style='white-space: pre-line;'> SCORE: " + wins + "</p>",
             icon: 'error',
             confirmButtonText: 'Play Again',
             background: 'black',
