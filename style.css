@@ -25,7 +25,34 @@ body {
 }
 
 .nav {
-position: absolute;
+    position: absolute;
+   display: flex;
+   
+}
+
+#gear {
+
+  display: flex;
+  justify-content: end;
+  
+}
+
+#sli {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/017/175/971/original/micah-souza-fire-animation-mediumsp2.gif?1554923579');
+background-size: 100px;
+background-repeat: no-repeat;
+background-position: center;
+   
+   
+}
+
+#info {
+    display: flex;
+    justify-content: start;
+    
 
 }
 
@@ -33,12 +60,6 @@ position: absolute;
 
 
 
-
-#search-bar {
-
-
-
-}
 
 
 
@@ -52,3 +73,50 @@ position: absolute;
 
 }
 
+.swal2-title{
+    color: red;
+    font-size: 2em;
+    position: relative;
+    animation: glow  linear,
+    move 2000ms;
+    animation-duration: 5s; 
+}
+
+@keyframes glow {
+    0% {
+     text-shadow: 0px 0px 8px #fff;
+    }
+    100% {
+      text-shadow: 0 0 3px #fff;
+    }
+  }
+  
+  @keyframes move {
+    0% {left: 100%}
+    50% {left: 0%}
+  }
+
+
+  #namanyay-search-btn {
+    background:#0099ff;
+    color:white;
+    font: 'trebuchet ms', trebuchet;
+    padding:10px 20px;
+    border-radius:0 10px 10px 0;
+    -moz-border-radius:0 10px 10px 0;
+    -webkit-border-radius:0 10px 10px 0;
+    -o-border-radius:0 10px 10px 0;
+    border:0 none;
+    font-weight:bold;
+    }
+     
+    #namanyay-search-box {
+    background: #eee;
+    padding:10px;
+     border-radius:10px 0 0 10px;
+    -moz-border-radius:10px 0 0 10px;
+    -webkit-border-radius:10px 0 0 10px;
+    -o-border-radius:10px 0 0 10px;
+    border:0 none;
+    width:160px;
+     }

@@ -10,6 +10,11 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" defer>
     <script>
+
+
+
+        let time = "";
+
         function info() {
             Swal.fire({
 
@@ -27,29 +32,65 @@
 function gear() {
             Swal.fire({
 
-                title: 'Next Slirdle',
+                title: 'Next Slirdle', 
+                text: time,
                 imageUrl: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/04/Featured-Image-Usopp-Wanted-Poster-Cropped.jpg',
                icon: 'question',
                
                background: 'black'
                 
         })
+}
+
+function sli() {
+            Swal.fire({
+                title: "JOIN THE COMMUNITY",
+                imageUrl: 'https://i.gifer.com/embedded/download/TsVW.gif',
+                imageSize: '900x',
+                 background: 'white',
+                 showDenyButton: true,
+                
+                 confirmButtonText: "JOIN HERE",
+                 denyButtonText: `back`,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "https://www.irl.com/";
+                    }
             
+});
 
-        }
+}
 
+
+
+    function timerUpdate() {    
+        
+    var currentTime = new Date();
+    var h = 23 - currentTime.getHours();
+    var m = 59 - currentTime.getMinutes();
+    var s = 59 - currentTime.getSeconds();
+
+    time = h + ":" + m + ":" + s;
+    console.log(time)
+}
+
+setInterval(timerUpdate,1000);
 
     </script>
 </head>
-<div class="nav">
-<div id="info"> <img src="img/info.png" alt="info" width="10%" type="button" value="" onclick="info()"> </div>
- <div id="gear"> <img src="img/gear.png" alt="info" width="10%" type="button" value="" onclick="gear()"></div> 
-</div>
+
+<nav class="nav">
+<div id="info"> <img src="img/info.png" alt="info" width="15%" type="button" value="" onclick="info()"> </div>
+<div id="sli"> <img src="img/slithur.png" alt="lg" width="12%" type="button" value="" onclick="sli()"></div>
+ <div id="gear"> <img src="img/gear.png" alt="info" width="15%" type="button" value="" onclick="gear()"></div> 
+</nav>
 <body>
+
 
     <audio id="song">
         <source type="audio/mpeg">
     </audio>
+
 
 
     <div class="play_and_guess">
@@ -63,7 +104,7 @@ function gear() {
 
 
         <div id="play">
-            <img id="playButton" src="img/play.png" alt="play button" width="100"
+            <img id="playButton" src="img/play.png" alt="play button" width="120"
                 onclick=" if(this.getAttribute('src')==='img/play.png'){this.setAttribute('src','img/pause.png'); document.getElementById('gif').style.visibility = 'visible'; playSong() } 
         else{this.setAttribute('src','img/play.png'); document.getElementById('gif').style.visibility = 'hidden'; pause()} " />
         </div>
@@ -72,10 +113,9 @@ function gear() {
 
 
 
-        <div id="search-bar">
-            <form id = "guess">
-                <input id="search" type="text" class="search-term" placeholder=" Guess that Anime?" autocomplete="off">
-                <button type="submit" form="guess" value="Submit">Enter</button>
+        <form id="searchthis" action="/search" style="display:inline;" method="get">
+            <input id="namanyay-search-box" name="q" size="40" type="text" placeholder="  Type! :D " autocomplete="off"/>
+            <input id="namanyay-search-btn" value="im" type="submit"/>
             </form>
             <p id="previousGuesses"></p>
         </div>
