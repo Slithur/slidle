@@ -80,9 +80,9 @@ setInterval(timerUpdate,1000);
 </head>
 
 <nav class="nav">
-<div id="info"> <img src="img/info.png" alt="info" width="15%" type="button" value="" onclick="info()"> </div>
+<div id="info"> <img src="img/info.png" alt="info" width="14%" type="button" value="" onclick="info()"> </div>
 <div id="sli"> <img src="img/slithur.png" alt="lg" width="15%" type="button" value="" onclick="sli()"></div>
-<div id="gear"> <img src="img/gear.png" alt="info" width="15%" type="button" value="" onclick="gear()"></div> 
+<div id="gear"> <img src="img/gear.png" alt="info" width="14%" type="button" value="" onclick="gear()"></div> 
 </nav>
 <body>
 
@@ -112,20 +112,15 @@ setInterval(timerUpdate,1000);
 
 
 
-
-        <form id="searchthis" action="/search" style="display:inline;" method="get">
-            <input id="namanyay-search-box" name="q" size="40" type="text" placeholder="    Guess that Anime " autocomplete="off"/>
+<div>
+        <form id="searchthis" action="/search" style="display:inline;" >
+            <input id="namanyay-search-box"  type="text" placeholder="    Guess that Anime " autocomplete="off"/>
             <input id="namanyay-search-btn" value="( ͡° ͜ʖ ͡°)" type="submit"/>
             </form>
             <p id="previousGuesses"></p>
         </div>
 
-    </div>
-
-
-
-
-    </div>
+    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
