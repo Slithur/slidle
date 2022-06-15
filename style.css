@@ -109,3 +109,11 @@ background-position: center;
     border:0 none;
     width:160px;
      }
+
+     @media only screen and (max-width: 500px) {
+      .nav{
+        float: none;
+        display: block;
+        text-align: center;
+      }
+    }
