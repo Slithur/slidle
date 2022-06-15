@@ -34,7 +34,7 @@ body {
 #gear {
 
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   
 }
 
@@ -113,8 +113,8 @@ background-position: center;
 
      @media only screen and (max-width: 500px) {
       .nav{
-       position: absolute;
+       position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
       }
     }
