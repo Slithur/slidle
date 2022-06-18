@@ -111,12 +111,14 @@ function handleGuess(event) {
 
         guessAmount += 1;
         console.log("current guessAmount " + guessAmount)
+        $('#namanyay-search-box').val('');
 
         if (userInput.toLowerCase().replace(/ /g,"") === secretAnime.anime.toLowerCase().replace(/ /g,"")) {
             song.pause()
             console.log("YOU WON!!")
             quote = secretAnime.quote;
             wins+=1;
+            $('#namanyay-search-box').val('');
 
             let html;
 
@@ -146,7 +148,7 @@ function handleGuess(event) {
     else {
         // you lost message
 
-            console.log("YOU LOST!!")
+        console.log("YOU LOST!!")
         song.pause()
 
         Swal.fire({

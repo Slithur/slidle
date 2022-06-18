@@ -15,7 +15,9 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    /* background-color: teal; */
+
+
+ 
 }
 
 
@@ -24,38 +26,31 @@ body {
     text-align: center;
 }
 
-.nav {
-    position: relative;
-   display: flex;
-   justify-content: space-around;
-   
-}
 
-#gear {
 
-  display: flex;
-  justify-content: flex-end;
-  
-}
 
 #sli {
-  
-    display: flex;
-    justify-content: center;
-    background-image: url('https://cdnb.artstation.com/p/assets/images/images/017/175/971/original/micah-souza-fire-animation-mediumsp2.gif?1554923579');
-background-size: 100px;
-background-repeat: no-repeat;
-background-position: center;
-   
+  position: absolute;
+  top: -4%;
+  left: 45%;
    
 }
 
 #info {
-    display: flex;
-    justify-content: start;
-    
+   
+ position: absolute; 
+top: 0%;
+left: 0%;
 
 }
+
+#gear {
+  position: absolute;
+  top: 0%;
+  left: 97%;
+  
+    
+  }
 
 
 
@@ -111,11 +106,32 @@ background-position: center;
     width:160px;
      }
 
-     @media only screen and (max-width: 500px) {
-      .nav{
-       position: relative;
-        display: flex;
-        justify-content: space-around;
-       
+     @media only screen and (max-width: 600px) {
+      #sli {
+        position: absolute;
+        top: -4%;
+        left: 45%;
+         
       }
-    }
+      
+      #info {
+         
+       position: absolute; 
+      top: 0%;
+      left: 0%;
+      
+      }
+      
+      #gear {
+        width: 1000%;
+        position: absolute;
+        top: 0%;
+        left: 97%;
+        
+          
+        }
+      
+        }
+
+    
+    
