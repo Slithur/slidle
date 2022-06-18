@@ -30,14 +30,18 @@ body {
 
 
 #sli {
+  background-image: url('https://cdnb.artstation.com/p/assets/images/images/017/175/971/original/micah-souza-fire-animation-mediumsp2.gif?1554923579%27');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
   position: absolute;
   top: -4%;
   left: 45%;
+
    
 }
 
 #info {
-   
  position: absolute; 
 top: 0%;
 left: 0%;
@@ -106,32 +110,32 @@ left: 0%;
     width:160px;
      }
 
-     @media only screen and (max-width: 600px) {
+     @media only screen and (max-width: 500px) {
       #sli {
         position: absolute;
-        top: -4%;
-        left: 45%;
+        top: -2%;
+        left: 40%;
+        width: 100%;
+        background-image: url('https://cdnb.artstation.com/p/assets/images/images/017/175/971/original/micah-souza-fire-animation-mediumsp2.gif?1554923579%27');
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: -4% 50%;
+ 
          
       }
-      
-      #info {
-         
-       position: absolute; 
-      top: 0%;
-      left: 0%;
-      
-      }
-      
+
       #gear {
-        width: 1000%;
         position: absolute;
         top: 0%;
-        left: 97%;
+        left: 90%;
+        width: 10%;
         
           
         }
-      
+        body{
+          overflow-x:hidden 
         }
+    
 
     
-    
+    }
