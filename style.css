@@ -126,9 +126,9 @@ left: 0%;
 
       #gear {
         position: absolute;
-        top: -1%;
+        top: 0vh;
         left: 89%;
-        width: 12%;
+        width: 10%;
         
           
         }
@@ -145,6 +145,33 @@ left: 0%;
           background-repeat: no-repeat;
          
         }
+
+        #namanyay-search-btn {
+          position: relative;
+          background:#0099ff;
+          color:white;
+          font: 'trebuchet ms', trebuchet;
+          padding:10px 20px;
+          border-radius:0 10px 10px 0;
+          -moz-border-radius:0 10px 10px 0;
+          -webkit-border-radius:0 10px 10px 0;
+          -o-border-radius:0 10px 10px 0;
+          border:0 none;
+          font-weight:bold;
+          }
+           
+          #namanyay-search-box {
+            position: relative;
+          background: #eee;
+          padding:10px;
+           border-radius:10px 0 0 10px;
+          -moz-border-radius:10px 0 0 10px;
+          -webkit-border-radius:10px 0 0 10px;
+          -o-border-radius:10px 0 0 10px;
+          border:0 none;
+          width:160px;
+          left: 8%;
+           }
     
 
     
